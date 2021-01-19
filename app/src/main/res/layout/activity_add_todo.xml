@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:transitionName="addTodo"
+    android:id="@+id/todoCard"
+    android:background="#B4B4B4"
+    tools:context=".AddTodo">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.499"
+        android:orientation="vertical"
+        android:background="@drawable/recycler_card_riple"
+        android:weightSum="2"
+        android:elevation="30dp"
+        android:layout_margin="20dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20dp">
+
+            <TextView
+                android:elevation="5dp"
+                android:id="@+id/setDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:background="@drawable/recycler_card_riple"
+                android:padding="10dp"
+                android:layout_margin="5dp"
+                android:textStyle="bold|italic"
+                android:text="set date "
+                android:textColor="#138880"
+                android:textAllCaps="false"
+                android:clickable="true"
+                android:focusable="true" />
+
+            <TextView
+                android:elevation="5dp"
+                android:id="@+id/setTime"
+                android:background="@drawable/recycler_card_riple"
+                android:padding="10dp"
+                android:layout_margin="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="set time"
+                android:textColor="#138880"
+                android:textAllCaps="false"
+                android:textStyle="bold|italic"
+                android:clickable="true"
+                android:layout_toEndOf="@id/setDate"
+                android:focusable="true" />
+            <TextView
+                android:elevation="5dp"
+                android:id="@+id/setNote"
+                android:background="@drawable/recycler_card_riple"
+                android:padding="10dp"
+                android:layout_margin="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Add Note"
+                android:textColor="#b41417"
+                android:textAllCaps="false"
+                android:textStyle="bold|italic"
+                android:clickable="true"
+                android:layout_toEndOf="@id/setTime"
+                android:layout_alignParentEnd="true"
+                android:textAlignment="center"
+                android:focusable="true" />
+
+        </RelativeLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            app:boxBackgroundColor="@color/sandal"
+            app:hintTextColor="@color/black"
+            android:textColorHint="#000000">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/todoNote"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:textColor="@color/black"
+                android:textStyle="italic|bold"
+                android:hint=""
+                android:textColorHint="#0C0C0C"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/addTodo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add"
+            android:textColor="#138880"
+            android:textStyle="bold|italic"
+            android:background="@drawable/recycler_card_riple"
+            android:layout_margin="20dp"
+            android:layout_gravity="right"/>
+
+        </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
